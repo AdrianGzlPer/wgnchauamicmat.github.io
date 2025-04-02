@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Working Group on Noncommutative Harmonic Analysis</title>
+    <script type="text/javascript" async 
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="style_UAM.css">
+    <style>
+        #past-seminars, #google-sheet { display: none; }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #64b5f6;
+        }
+        .footer img {
+            max-width: 150px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+    function setActiveTab(tab) {
+        document.getElementById('upcoming-seminars').style.display = tab === 'upcoming' ? 'block' : 'none';
+        document.getElementById('past-seminars').style.display = tab === 'past' ? 'block' : 'none';
+        document.getElementById('google-sheet').style.display = tab === 'google' ? 'block' : 'none';
+
+        document.getElementById('btn-upcoming').classList.remove('active');
+        document.getElementById('btn-past').classList.remove('active');
+        document.getElementById('btn-google').classList.remove('active');
+
+        document.getElementById('btn-' + tab).classList.add('active');
+    }
+
+    // Set default active tab on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        setActiveTab('upcoming');
+    });
+</script>
+
+  <h1>Working Group on Noncommutative Harmonic Analysis</h1>
+  <h2>2024-2025 | UAM-ICMAT</h2>
+
+  <div id="menu">
+    <button id="btn-upcoming" onclick="setActiveTab('upcoming')">Upcoming Seminars</button>
+    <button id="btn-past" onclick="setActiveTab('past')">Past Seminars</button>
+    <button id="btn-google" onclick="setActiveTab('google')">Recent Articles</button>
+  </div>
+    
+    <div id="upcoming-seminars">
+        <div class="seminar">
+            <h2>Title: Introduction to Algebraic Topology</h2>
+            <p><strong>Time:</strong> April 5, 2025, 2:00 PM</p>
+            <p><strong>Place:</strong> Room 101, Math Building</p>
+            <p><strong>Abstract:</strong> We discuss fundamental concepts of algebraic topology, including homotopy and homology.</p>
+            <p>Equation example: \( \int_{0}^{1} x^2 \, dx \)</p>
+        </div>
+    </div>
+    
+    <div id="past-seminars">
+        <div class="seminar">
+            <h2>Title: Differential Geometry and Its Applications</h2>
+            <p><strong>Time:</strong> March 20, 2025, 3:00 PM</p>
+            <p><strong>Place:</strong> Room 202, Math Building</p>
+            <p><strong>Abstract:</strong> This talk explores differential geometry and its applications in physics and engineering.</p>
+        </div>
+    </div>
+    
+    <div id="google-sheet">
+        <h2>Shared Google Sheet</h2>
+        <p><a href="#" id="sheet-link">Click here to access the shared Google Sheet (invitation only)</a></p>
+    </div>
+    
+    <button onclick="generatePDF()">Download PDF</button>
+    <!--- height=100px width=253px height=100px width=714px --->
+    <div class="footer">
+          <img src="logomatuam.jpg" alt="Institution Seal">
+          <img src="logo-icmat-small.jpg" alt="Funding Body Logo">
+    </div>
+    
+    <script>
+        function generatePDF() {
+            const element = document.getElementById('upcoming-seminars');
+            html2pdf().from(element).save('seminars.pdf');
+        }
+        
+        function showUpcoming() {
+            document.getElementById('upcoming-seminars').style.display = 'block';
+            document.getElementById('past-seminars').style.display = 'none';
+            document.getElementById('google-sheet').style.display = 'none';
+        }
+        
+        function showPast() {
+            document.getElementById('upcoming-seminars').style.display = 'none';
+            document.getElementById('past-seminars').style.display = 'block';
+            document.getElementById('google-sheet').style.display = 'none';
+        }
+        
+        function showGoogleSheet() {
+            document.getElementById('upcoming-seminars').style.display = 'none';
+            document.getElementById('past-seminars').style.display = 'none';
+            document.getElementById('google-sheet').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
+    
+    <div id="google-sheet">
+        <h2>Shared Google Sheet</h2>
+        <p><a href="#" id="sheet-link">Click here to access the shared Google Sheet</a></p>
+    </div>
+</body>
+</html>
+

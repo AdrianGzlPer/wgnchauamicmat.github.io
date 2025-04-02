@@ -1,0 +1,112 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 60px auto; /* Increased margin for better spacing */
+    max-width: 900px; /* Slightly wider container */
+    background-color: #D0DDE8; /* Light blue background matching logo */
+    padding: 30px; /* Increased padding inside the content area */
+    color: #1A345D; /* Dark blue text */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for contrast */
+}
+
+h1 {
+    text-align: center;
+    color: #1A345D; /* Dark blue from logo */
+}
+
+h2 {
+    text-align: center;
+    color: #1A345D; /* Dark blue */
+}
+
+.seminar { 
+    border-bottom: 2px solid #1A345D; /* Darker blue */
+    padding: 15px 0; 
+    margin-bottom: 15px; /* Adds spacing between seminars */
+}
+
+#menu { 
+    margin-bottom: 30px; 
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+button { 
+    padding: 10px 15px;
+    background-color: #4A78A5; /* Medium blue from logo */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button.active {
+    background-color: #A2BBD2; /* Light blue to highlight active tab */
+    color: #1A345D; /* Dark blue text */
+    font-weight: bold;
+    border: 2px solid #1A345D; /* Darker border for emphasis */
+}
+
+button:hover {
+    background-color: #1A345D; /* Darker blue */
+}
+
+#past-seminars, #google-sheet, #upcoming-seminars { 
+    display: none; 
+}
+
+#google-sheet p {
+    text-align: center;
+}
+
+a {
+    color: #4A78A5; /* Blue link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 3px solid #1A345D; /* Dark blue border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    width: 100%; /* Make footer take full width */
+    max-width: 1000px; /* Prevent it from becoming too wide */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.footer img {
+    height: 80px; /* Set consistent height for images */
+    object-fit: contain; /* Ensure images are properly contained */
+}
+
+.footer img:first-child {
+    width: auto; /* Maintain aspect ratio */
+    flex: 1; /* Allow resizing */
+}
+
+.footer img:last-child {
+    width: auto; /* Maintain aspect ratio */
+    flex: 5; /* Allow the second image to be significantly wider */
+}
+
+/*.footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 3px solid #1A345D;  /* Darker blue *//*}*/
+
+
